@@ -49,3 +49,8 @@ This notebook cover the following tasks:
 
 
 
+## Numpy
+
+
+
+## Data Visualization
