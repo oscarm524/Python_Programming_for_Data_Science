@@ -54,3 +54,16 @@ This notebook cover the following tasks:
 
 
 ## Data Visualization
+
+This notebook cover the following tasks using matplotlib:
+
+    - How to create a simple plot 
+    - Histogram
+    - Subplots
+    - Bar chart
+    - Grouped bar chart
+    - Stacked bar chart
+    - Stacked percentage bar chart
+    - Pie chart
+    - Box plot
+    - Scatter plot
