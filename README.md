@@ -4,10 +4,11 @@ In this repository, I include several taks that any data scientist needs to know
 
 ## Reading Data
 
-This notebook covers how to read thre different data files into Python using pandas:
+This notebook covers how to read three different data files into Python using pandas:
 
     - Text file
     - CSV file
+    - Excel file
     - JSON file
 
 ## Data Wrangling
@@ -29,7 +30,7 @@ This notebook covers the following tasks:
 
 ## Dates and Time
 
-This notebook cover the following tasks:
+This notebook covers the following tasks:
 
     - Converting strings to date-time object
     - Defining time zones
@@ -47,6 +48,11 @@ This notebook cover the following tasks:
 
 ## Handling Categorical Data
 
+This notebook covers the followign tasks:
+
+    - Encoding nominal variables
+    - Encoding ordinal variables
+    - Encoding dictionaries
 
 
 ## Numpy
@@ -55,7 +61,7 @@ This notebook cover the following tasks:
 
 ## Data Visualization
 
-This notebook cover the following tasks using matplotlib:
+This notebook covers the following tasks using matplotlib:
 
     - How to create a simple plot 
     - Histogram
