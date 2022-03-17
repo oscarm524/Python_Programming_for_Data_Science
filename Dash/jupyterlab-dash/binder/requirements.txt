@@ -1,0 +1,4 @@
+jupyterlab>=1.0.0
+jupyter-server-proxy
+pandas
+dash
