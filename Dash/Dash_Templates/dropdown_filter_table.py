@@ -57,3 +57,25 @@ def bootstrap_ci(values):
         results.append(resample(values, replace = True))
     
     return np.std(results, ddof = 1)
+
+
+@app.callback(
+    Output('summary-stats', 'children'),
+    [Input('table-container','children')])
+def summary_stats(data):
+    
+    x = data['props']['children']
+    numbs = list()
+    
+    for i in range(1, len(x)): 
+        numbs.append(pd.DataFrame(x[i]['props']['children'])['props'][3]['children'])
+    
+    average = round(np.mean(numbs), 2)
+    minimum = round(np.min(numbs), 2)
+    maximum = round(np.max(numbs), 2)
+    sd = bootstrap_ci(numbs)
+    low_bound = round(average - 2*sd, 2)
+    up_bound = round(average + 2*sd, 2)
+    
+    data_out = pd.DataFrame({'Average': average, 'Min': minimum, 'Max': maximum, 'Lower Bound': low_bound, 'Upper Bound': up_bound}, index = [0])
+    return generate_table(data_out)
