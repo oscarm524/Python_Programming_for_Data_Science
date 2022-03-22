@@ -46,3 +46,14 @@ def display_table(dropdown_value):
 
     dff = df[df.continent.str.contains('|'.join(dropdown_value))]
     return generate_table(dff)
+
+
+def bootstrap_ci(values):
+
+    results = list()
+    
+    for i in range(0, 1000):
+        
+        results.append(resample(values, replace = True))
+    
+    return np.std(results, ddof = 1)
