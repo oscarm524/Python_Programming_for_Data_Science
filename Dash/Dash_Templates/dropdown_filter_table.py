@@ -4,3 +4,7 @@ from dash.dependencies import Input, Output
 import pandas as pd
 import numpy as np
 from sklearn.utils import resample
+
+## Reading data 
+df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv')
+df = df[['continent', 'country', 'pop', 'lifeExp']]  # prune columns for example
