@@ -36,3 +36,13 @@ app.layout = html.Div(children = [
     html.H1('Summary Statistics of Life Expentancy'),
     html.Div(id = 'summary-stats')
 ])
+
+@app.callback(
+    Output('table-container', 'children'),
+    [Input('dropdown', 'value')])
+def display_table(dropdown_value):
+    if dropdown_value is None:
+        return generate_table(df)
+
+    dff = df[df.continent.str.contains('|'.join(dropdown_value))]
+    return generate_table(dff)
