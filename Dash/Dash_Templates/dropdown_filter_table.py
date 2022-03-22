@@ -19,3 +19,20 @@ def generate_table(dataframe, max_rows = 10):
             html.Td(dataframe.iloc[i][col]) for col in dataframe.columns
         ]) for i in range(min(len(dataframe), max_rows))] 
     )
+
+app = Dash(__name__)
+
+
+app.layout = html.Div(children = [
+    html.H1(children = 'Toy Example'),
+    dcc.Dropdown(id = 'dropdown', 
+    options = [
+        {'label': i, 'value': i} for i in df.continent.unique()
+    ], 
+    multi = True, 
+    placeholder = 'Filter by continent'),
+    html.Div(id = 'table-container'), 
+    
+    html.H1('Summary Statistics of Life Expentancy'),
+    html.Div(id = 'summary-stats')
+])
